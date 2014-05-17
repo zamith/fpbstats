@@ -1,0 +1,5 @@
+section#players ng-controller='PlayersController as playersCtrl'
+  ul
+    li ng-repeat='player in players'
+      p ng-bind='player.name'
+      p ng-bind='player.ppg'

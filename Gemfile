@@ -13,6 +13,7 @@ gem 'recipient_interceptor'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'slim-rails'
+gem 'sprockets', '2.11.0'
 gem 'title'
 gem 'uglifier'
 gem 'unicorn'
@@ -21,6 +22,7 @@ group :development do
   gem 'foreman'
   gem 'spring'
   gem 'spring-commands-rspec'
+  gem 'quiet_assets'
 end
 
 group :development, :test do

@@ -5,8 +5,9 @@ html
     meta name="ROBOTS" content="NOODP"
     title = title
     = stylesheet_link_tag :application, media: 'all'
+    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"
     = csrf_meta_tags
-  body
+  body ng-app='statsApp'
     = render 'flashes'
     = yield
     = render 'javascript'
