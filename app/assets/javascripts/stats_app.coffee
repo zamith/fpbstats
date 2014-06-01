@@ -21,3 +21,20 @@ app.factory 'Player', ['$http', ($http) ->
     find: find
   }
 ]
+
+app.directive 'fpbCircleStat', ->
+  return {
+    restrict: 'E'
+    template: ''
+    scope:
+      player: '='
+    link: (scope, element, attrs) ->
+      scope.$watch 'player', (newPlayer, oldPlayer) ->
+        return if !newPlayer || oldPlayer == newPlayer
+
+        attrs['part'] = newPlayer[attrs['stat']]
+        attrs['total'] = newPlayer.team[attrs['stat']]
+        attrs['text'] ||= ""
+        attrs['dimension'] ||= 250
+        $(element).circliful attrs
+  }

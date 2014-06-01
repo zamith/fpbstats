@@ -3,7 +3,7 @@ section.player ng-controller='PlayerController as playerCtrl'
     img.picture ng-src='{{player.picture}}'
     .info
       div ng-bind='player.name'
-      div ng-bind='player.team'
+      div ng-bind='player.team.name'
 
   .season-highlights
     span.sh-title Current Season Stats
@@ -16,3 +16,8 @@ section.player ng-controller='PlayerController as playerCtrl'
         td ng-bind='player.ppg'
         td ng-bind='player.rpg'
         td ng-bind='player.apg'
+
+  .team-relative-stats
+    fpb-circle-stat width='30' player="player" stat="ppg" info="% Team Points" fgcolor="#61a9dc" bgcolor="#eee" fill="#ddd"
+    fpb-circle-stat width='30' player="player" stat="apg" info="% Team Assists" fgcolor="#61a9dc" bgcolor="#eee" fill="#ddd"
+    fpb-circle-stat width='30' player="player" stat="rpg" info="% Team Rebounds" fgcolor="#61a9dc" bgcolor="#eee" fill="#ddd"
