@@ -17,7 +17,8 @@
         }, options);
 
         return this.each(function () {
-            var customSettings = ["fgcolor",
+            var customSettings = [
+               "fgcolor",
                "bgcolor",
                "fill",
                "width",

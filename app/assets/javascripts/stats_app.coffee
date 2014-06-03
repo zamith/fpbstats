@@ -32,9 +32,9 @@ app.directive 'fpbCircleStat', ->
       scope.$watch 'player', (newPlayer, oldPlayer) ->
         return if !newPlayer || oldPlayer == newPlayer
 
-        attrs['part'] = newPlayer[attrs['stat']]
-        attrs['total'] = newPlayer.team[attrs['stat']]
-        attrs['text'] ||= ""
-        attrs['dimension'] ||= 250
+        attrs.part = newPlayer[attrs['stat']]
+        attrs.total = newPlayer.team[attrs['stat']]
+        attrs.text ||= ""
+        attrs.dimension ||= 250
         $(element).circliful attrs
   }
