@@ -6,8 +6,12 @@ html
     title = title
     = stylesheet_link_tag :application, media: 'all'
     = javascript_include_tag "//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"
+    = render 'javascript'
+    link rel="import" href="http://www.polymer-project.org/components/core-icons/core-icons.html"
+    link rel="import" href="http://www.polymer-project.org/components/paper-tabs/paper-tabs.html"
+    link rel="import" href="http://www.polymer-project.org/components/paper-shadow/paper-shadow.html"
+    /* = html_import_tag "application" */
     = csrf_meta_tags
   body ng-app='statsApp'
     = render 'flashes'
     = yield
-    = render 'javascript'
