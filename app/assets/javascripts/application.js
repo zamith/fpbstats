@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require platform/platform
+//= require polymer/polymer
 //= require jquery
 //= require jquery_ujs
 //= require jquery.circliful
